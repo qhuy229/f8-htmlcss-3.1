@@ -17,6 +17,7 @@ body {
     --text-color-light-gray: #7d8188;
     --text-color-black-gray: #575d5e;
     --second-color-light-green: #e2eddf;
+    --second-color-gray: #6a8383;
 }
 
 /* common */
@@ -549,6 +550,7 @@ li.active a::before {
 /* progress */
 .progress {
     padding-top: 79px;
+    margin-bottom: 148px;
 }
 
 .pg__header {
@@ -638,6 +640,7 @@ li.active a::before {
     position: absolute;
     bottom: 0;
     right: 91px;
+    object-fit: contain;
 }
 
 .pg__step--link {
@@ -668,4 +671,58 @@ li.active a::before {
 .pg__step--list:hover .pg__step--link,
 .pg__step--list:hover .pg__step--img {
     display: block;
+}
+
+/* video */
+.video {
+    background: var(--primary-color-black-green);
+    padding-top: 116px;
+    padding-bottom: 63px;
+}
+
+.media {
+    position: relative;
+}
+
+.video .content {
+    display: flex;
+}
+
+.video__header {
+    color: #e7f9f9;
+    font-size: 4.2rem;
+    font-weight: 600;
+    line-height: 5.2rem;
+}
+
+.video__desc--text {
+    color: var(--second-color-gray);
+    font-family: "Public Sans";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.8rem;
+    margin-bottom: 13px;
+}
+
+.video__desc--link {
+    color: #fff;
+    font-family: "Public Sans";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.8rem;
+    margin-right: 26px;
+}
+
+.video__main {
+    width: 1140px;
+    object-fit: cover;
+    height: 544px;
+    margin-top: 65px;
+}
+
+.video__play--btn {
+    display: inline-block;
+    position: absolute;
+    bottom: 213px;
+    left: 511px;
 }
