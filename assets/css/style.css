@@ -73,17 +73,18 @@ button {
 
 .nav-bar__list {
     display: flex;
-    gap: 38px;
+    gap: 26px;
     margin-left: 250px;
 }
 
 .nav-bar__item a {
-    color: #152427;
+    color: var(--text-color-light-gray);
     font-family: "Public Sans";
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 2.8rem;
     position: relative;
+    padding: 0 12px;
 }
 
 .nav-bar__list a:hover,
@@ -101,7 +102,7 @@ li.active a::before {
     border-radius: 1px;
     background: var(--primary-color-black-green);
     bottom: -25px;
-    left: 0px;
+    left: 12px;
 }
 
 /* hero */
@@ -806,7 +807,9 @@ li.active a::before {
 /* blog */
 .blog {
     padding-top: 184px;
+    margin-bottom: 102px;
 }
+
 .blog__header {
     display: flex;
     justify-content: space-between;
@@ -883,7 +886,15 @@ li.active a::before {
     width: 107px;
     height: 26px;
     border-radius: 20px;
-    margin-top: 26px;
+}
+
+.blog__item--content {
+    background: #fff;
+    padding: 26px 14px 12px 0px;
+    border-radius: 0px 0px 20px 20px;
+    height: 204px;
+    position: relative;
+    transition: 0.25s;
 }
 
 .blog__content {
@@ -893,20 +904,6 @@ li.active a::before {
     font-weight: 600;
     line-height: 3rem;
     margin-top: 13px;
-    position: relative;
-    
-}
-
-.blog__content::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    background: #c4c4c4;
-    width: 337px;
-    height: 1px;
-    bottom: -39px;
-    left: 0;
-    z-index: 1;
 }
 
 .blog__date {
@@ -915,14 +912,17 @@ li.active a::before {
     font-weight: 500;
     line-height: 1.2rem;
     margin-top: 16px;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 55px;
-    margin-right: 20px;
+    text-align: end;
+    padding-top: 15px;
+    width: calc(100% - 23px);
+    border-top: 1px solid #C4C4C4;
+    position: absolute;
+    bottom: 12px;
+    right: 23px;
 }
 
 .blog__item {
-    transition: 0.s;
+    transition: 0s;
 }
 
 .blog__item:hover {
@@ -952,6 +952,161 @@ li.active a::before {
 }
 
 .blog__item:hover .blog__date {
-    margin-top: 25px;
-} 
+    width: calc(100% - 60px);
+    right: 30px;
+}
 
+.blog__item:hover .blog__date {
+    margin-top: 25px;
+}
+
+/* footer */
+.footer {
+    background: var(--primary-color-black-green);
+    padding-top: 72px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.footer .container {
+    display: flex;
+    gap: 261px;
+}
+
+.footer__line {
+    display: block;
+    width: 1140px;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        #143c3c 2.28%,
+        #295a5a 55.65%,
+        rgba(38, 82, 82, 0) 102.06%
+    );
+    position: absolute;
+    margin-bottom: 50px;
+    bottom: 5px;
+}
+
+.footer__blockleft {
+    width: 36.05%;
+}
+
+.footer__haeding {
+    color: #fff;
+    font-size: 3.2rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.footer__form {
+    display: flex;
+    align-items: center;
+    /* border-bottom: 1px solid var(--second-color-gray); */
+    width: 354px;
+    margin-bottom: 47px;
+    position: relative;
+}
+
+.footer__form::after {
+    content: "";
+    display: inline-block;
+    width: 354px;
+    height: 1px;
+    background: var(--second-color-gray);
+    position: absolute;
+    bottom: -18px;
+}
+
+.email__form--input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: calc(354px - 39px);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+    color: #fff;
+}
+
+.email__form--input::placeholder {
+    color: var(--second-color-gray);
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 2.2rem;
+}
+
+.form__btn {
+    display: inline-block;
+    color: #c4c4c4;
+    margin-right: -500px;
+    z-index: 1;
+}
+
+.form__btn:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.form__btn:active {
+    transform: scale(0.9);
+}
+
+.footer__social {
+    display: flex;
+    gap: 22px;
+}
+
+.ins {
+    width: 18.27px;
+    height: 18.27px;
+    border-radius: 3px;
+    border: 2px solid #fcfcfc;
+    padding: 4px;
+}
+
+.social-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 52px;
+    height: 52px;
+    border: 1px solid #265252;
+    border-radius: 50%;
+}
+
+.social-item:hover {
+    background: #a75325;
+}
+
+.footer__list {
+    display: flex;
+    gap: 50px;
+}
+
+.footer__item--heading {
+    color: #fff;
+    font-family: "Public Sans";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.8rem;
+    margin-bottom: 18px;
+}
+
+.footer__item {
+    display: block;
+    color: var(--second-color-gray);
+    font-family: "Public Sans";
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 3.6rem;
+    margin-bottom: 8px;
+}
+
+.footer__item:hover {
+    color: #fff;
+    text-decoration: underline;
+}
