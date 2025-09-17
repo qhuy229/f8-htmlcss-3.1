@@ -347,6 +347,11 @@ li.active a::before {
 .service__control-btn:hover {
     background: var(--primary-color-black-green);
     color: #fff;
+    cursor: pointer;
+}
+
+.service__control-btn:active {
+    transform: scale(0.98);
 }
 
 .service__info {
