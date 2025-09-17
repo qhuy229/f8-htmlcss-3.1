@@ -4,6 +4,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -11,11 +12,11 @@ body {
 }
 
 :root {
-    --second-font: "Public Sans", sans-serif;
     --primary-color-black-green: #143c3c;
     --primary-color-black: #152427;
     --text-color-light-gray: #7d8188;
     --text-color-black-gray: #575d5e;
+    --second-font: "Public Sans", sans-serif;
     --second-color-light-green: #e2eddf;
     --second-color-gray: #6a8383;
 }
@@ -62,7 +63,41 @@ button {
     transform: scale(0.985);
 }
 
+.line {
+    display: block;
+    width: 1140px;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        #143c3c 2.28%,
+        #295a5a 55.65%,
+        rgba(38, 82, 82, 0) 102.06%
+    );
+}
+
 /* header */
+.header {
+    position: relative;
+    padding-bottom: 7px;
+}
+
+.header-fixed {
+    position: sticky;
+    z-index: 2;
+    top: -16px;
+    background: #fff;
+}
+
+.header__line {
+    background: linear-gradient(
+        90deg,
+        #fff 0%,
+        #dddcdc 51.09%,
+        rgba(212, 212, 212, 0) 99.68%
+    );
+    position: absolute;
+    bottom: 0;
+}
 
 .nav-bar {
     display: flex;
@@ -79,7 +114,7 @@ button {
 
 .nav-bar__item a {
     color: var(--text-color-light-gray);
-    font-family: "Public Sans";
+    font-family: var(--second-font);
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 2.8rem;
@@ -123,7 +158,7 @@ li.active a::before {
     display: inline-block;
     width: 368px;
     color: var(--primary-color-black);
-    font-family: "Public Sans";
+    font-family: var(--second-font);
     font-size: 5rem;
     font-weight: 800;
     line-height: 6rem;
@@ -133,7 +168,7 @@ li.active a::before {
 
 .hero__desc {
     color: var(--text-color-black-gray);
-    font-family: "Public Sans";
+    font-family: var(--second-font);
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 2.8rem;
@@ -417,7 +452,7 @@ li.active a::before {
 
 .about__img--header {
     color: var(--primary-color-black);
-    font-family: "Public Sans";
+    font-family: var(--second-font);
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 1.4rem;
@@ -426,7 +461,7 @@ li.active a::before {
 
 .about__img--desc {
     color: var(--text-color-black-gray);
-    font-family: "Public Sans";
+    font-family: var(--second-font);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.4rem;
@@ -435,7 +470,7 @@ li.active a::before {
 
 .percent {
     color: var(--primary-color-black);
-    font-family: "Public Sans";
+    font-family: var(--second-font);
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.4rem;
@@ -453,7 +488,7 @@ li.active a::before {
 
 .loading {
     color: var(--primary-color-black);
-    font-family: "Public Sans";
+    font-family: var(--second-font);
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.4rem;
@@ -467,7 +502,7 @@ li.active a::before {
 
 .teams {
     color: var(--primary-color-black);
-    font-family: "Public Sans";
+    font-family: var(--second-font);
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.4rem;
@@ -629,7 +664,7 @@ li.active a::before {
 
 .pg__step--text {
     color: var(--text-color-light-gray);
-    font-family: "Public Sans";
+    font-family: var(--second-font);
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 2.8rem;
@@ -698,7 +733,7 @@ li.active a::before {
 
 .video__desc--text {
     color: var(--second-color-gray);
-    font-family: "Public Sans";
+    font-family: var(--second-font);
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 2.8rem;
@@ -707,7 +742,7 @@ li.active a::before {
 
 .video__desc--link {
     color: #fff;
-    font-family: "Public Sans";
+    font-family: var(--second-font);
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 2.8rem;
@@ -915,7 +950,7 @@ li.active a::before {
     text-align: end;
     padding-top: 15px;
     width: calc(100% - 23px);
-    border-top: 1px solid #C4C4C4;
+    border-top: 1px solid #c4c4c4;
     position: absolute;
     bottom: 12px;
     right: 23px;
@@ -1089,7 +1124,7 @@ li.active a::before {
 
 .footer__item--heading {
     color: #fff;
-    font-family: "Public Sans";
+    font-family: var(--second-font);
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 2.8rem;
@@ -1099,7 +1134,7 @@ li.active a::before {
 .footer__item {
     display: block;
     color: var(--second-color-gray);
-    font-family: "Public Sans";
+    font-family: var(--second-font);
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 3.6rem;
